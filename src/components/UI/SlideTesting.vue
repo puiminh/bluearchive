@@ -1,83 +1,66 @@
 <template>
-  <the-header-vue></the-header-vue>
-  <the-header-moblie-vue></the-header-moblie-vue>
-  <router-view></router-view>
-  
-  <the-footer-vue></the-footer-vue>
+  <el-carousel  type="card" height="19.3rem" arrow="always" :autoplay="false" :interval="10000000000" indicator-position="none">
+    <el-carousel-item>
+        
+      
+    <img
+        data-v-08345156=""
+        src="https://webusstatic.yo-star.com/bluearchive_jp_web/img/system02.ffe22824.png"
+        data-v-63233e00="">
+        <div
+            class="swiper-slide-shadow-left"
+            data-v-63233e00=""
+            style="opacity: 0; transition-duration: 0ms;"></div>
+        <div
+            class="swiper-slide-shadow-right"
+            data-v-63233e00=""
+            style="opacity: 0.00157853; transition-duration: 0ms;"></div>
+    
+    </el-carousel-item>
+    <el-carousel-item>
+            
+        <img
+            data-v-08345156=""
+            src="https://webusstatic.yo-star.com/bluearchive_jp_web/img/system03.1b946a75.png">
+            <div
+                class="swiper-slide-shadow-left"
+                style="opacity: 0.104183; transition-duration: 0ms;"></div>
+            <div
+                class="swiper-slide-shadow-right"
+                style="opacity: 0; transition-duration: 0ms;"></div>
+        
+    </el-carousel-item>
+    <el-carousel-item>
+        
+    <img
+        data-v-08345156=""
+        src="https://webusstatic.yo-star.com/bluearchive_jp_web/img/system01.26480e4a.png">
+        <div
+            class="swiper-slide-shadow-left"
+            style="opacity: 0; transition-duration: 0ms;"></div>
+        <div
+            class="swiper-slide-shadow-right"
+            style="opacity: 0; transition-duration: 0ms;"></div>
+    
+    </el-carousel-item>
+  </el-carousel>
 </template>
 
-<script>
-import TheHeaderVue from './components/TheHeader.vue'
-import TheFooterVue from './components/TheFooter.vue'
-import TheHeaderMoblieVue from './components/TheHeaderMoblie.vue'
+<style scoped>
 
 
-
-export default {
-  name: 'App',
-  components: {
-    TheHeaderVue,
-    TheHeaderMoblieVue,
-    TheFooterVue,
-    
-  },
+.el-carousel__item:nth-child(2n) {
   
 }
-</script>
 
-<style>
+.el-carousel__item:nth-child(2n + 1) {
   
-@import './chunk-vendors.c412edf5.css';
-
-
-html {
-    font-size: 1.5625vw;
 }
-body {
-    min-width: 100%;
-}
-
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-@font-face {
-    font-family: 'RoGSanSrfStd-Bd';
-    src:url('RoGSanSrfStd-Bd.ttf.woff') format('woff'),
-        url('RoGSanSrfStd-Bd.ttf.svg#RoGSanSrfStd-Bd') format('svg'),
-        url('RoGSanSrfStd-Bd.ttf.eot'),
-        url('RoGSanSrfStd-Bd.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-#app {
-  font-family: 'Bree Serif', serif;
-}
-img {
-    vertical-align: middle;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-h1, h2, h3, p, ul, li {
-    margin: 0;
-    
-}
-ul {
-    padding: 0;
-    list-style: none;
-    
-}
-a {
-    text-decoration: none;
-}
-.el-carousel__arrow--right {
+/* .el-carousel__arrow--right {
     width: 1.26667rem;
     height: 1.46667rem;
     position: absolute;
-    right: 21.5%;
+    right: 24%;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAuCAYAAABEbmvDAAAAAXNSR0IArs4c6QAABoBJREFUWEfNmGtsFFUUx+/dnZnOzj5mt9stsLBtl6YIKAJqTGqEEBIfCXyQAAU0Aq2gvCVQoFDaQllaaIGICBgCLQEUWg0YxcRIfBBRA74gEFFMSy3t0hbYpfuYndfONYMsLmW2MytbYD/u/Z//+d1zZ869dyB4RH+wrIPbsKF/WtmjxgdntPKHD4fh9Jco8Om2LGzq4xDyjwLkHTAZBgNAXEijHdudxLKHDXcXWAwmXYduVKeDNW9m4AchhJGHAakIFgMZiaFz72ZEl4y1kmcghOyDBOwV7DYImmaUGjdbpNXZNNnxoCqoBewWnwmC0Apa2rKEZLZbrVa2ryuoGSy2jIMx1FRNi2sKHIbjEEKmr5YXTmvljjSEddOSTfACiU5ssgmrn6KpPyCE4WTj1fSKYHLbEG91j95/BAD8fJPwfrEd1AwyGHypfP4UwQqNYt2zadLP629i5R2Srr8aYKYOdVVYhPXTCfaQ3W4PqOm1jMOCvyMNjQxWEC+eQ4l7q6nQMkBRJo8PluwO4fN4AAg1w1F49LetVqH4ScT+5HA4gmr63sYVwYqM/L66LOMcOdDn89GtIhy8NpRWeZzDJ2pIhmYYxAaPjS/Ppem/NOgVJapgsSi/32/9hsfGr+7Gq/6M6h9TS0gBFC6xRGvKBxoq1bRK4wnBtpi45enp6d09g64Gg46DAThrU4go8UnQrpbUrZfOXR6SNkpN13NcEazQwNfVZVPzIIRCIsOmrq68jaxx1YEwMUvtDYYAdKNhuDUZOFjQwjY2RvRT44NksPoc4xtajH7ovPHcmqBh47cCPk5JPxqL/rrVKiwb7zCf1OIX09w3mGzk9XozTkiGCRVhQ0WLpHfL/9kg8pWZIp7pFnjQabFcTwZK1qYELJb0yvXrA/eF8blNUf3gNeaIZ2hGRjOEUIyHagsE7FV+XfkeJq1oFB49NTE3bcI6CKV7nzGlpSS5+nq3qSjZWcp6hBDu9/upni+O3HaORrCppSHS0ylBBwBAd9tfetUgHq608etyLZaW2ESUK0Zy9XU5xrkQwuj/gesZ833njfxVQcPmUwI+JpGf3F5Wm4XqxSZhF03TTG9gb/X2VmoBlqt0hkX5swOm+g6kvrXJnm691LwlPVqsCDab4PaXSlfn5eXlcVoAemoQQtiFtq7hVTxVcoQnp6H/lk3NDrn10uVaOroSTmlmPvqYw6fER8hgVYbAQqfTmfR5q8nrzdrLUfO3s9RiBkCjGknsOaMACpVYhK1LzdGdZrM5lBCsmgquHDBgwDWNxqC1tdX5pWR82cNSZS0Iy9EaBwDgZ5DC0XKTWGFHrDczMzN0q10kqtg2G79UaUvqmVAGaoL4kJKwqeo0IvOTAOJGYtELtWZ21Yv9rV/d0y4SgdVaIkt6O7q0tbXZfQg5t3GW5YcE6jW1bSkuseiAUtdaI7vpbRe9I9FEElZsf66pMFFQs9eb/SFDvF4jmFcEgM6itUo4QuE5hsiB3W56gVrMPWCDYLRtuzGyZLLLdkxp2X5E5PNlrHnDJQkbomYeN86Ow/jvKk3s0rED7L9ribsDJp/fF1DsrhUYv23gQPuV+GCEkP5se/uISpYuPyaQk7QY39aI2TqxpcLArC3KsjckEffvw98lAcdmE7MqW+LP92wR7e3trn08VVjLGYuDCJo1mkvy67+ICO2uyU0v0RhzlwyevnbzmaEEbKZp2hc/Ip9YTzHimJUhatNFiRiu0RwBAKRXsPBnG/TcvBGD+3VqjLtHBpUCz3u9wzyMuaJBIOVLiqJGIS76hF68uJHsLs0ndV/H+lFKwDo6OjIP8NTMKoYsvYmg1hMnsgHJX5oWqJoMQzvdbndKPr7cqgZCiDjR2T1mZZCsPSvqR2ucJcIAiBZiwfqlBPfO8Kz+FyGE8lKm5Acv+/05ld1E+f4IMSuJzRaM1bMny4nQ+mwh9EteXl5KLrnxM4IFl5mGRha/68Lb25RzoNhSRgY9L+q5L1wuV3tKyqNgotj5lZLJB7lFJPPeHB23Z0h2v+a+Aor5agFDk3D2k1JDwPO003n+fg+PWiekeFCMBY/AxPOetNDafBKdyczM7NBqmgqdIpgNSL5SI1M1kxQ+eNBAd5Yy/sIrfxcrItm6FRRTQ/K81+VyPZQv1jLcnYqNxaMna0xcyTADuNRze0rF0iTrAYuvMLUjCensREL43Gaz3UzWoK/0sc6vgwq34b5KqsX3HwbMGyK/J7gjAAAAAElFTkSuQmCC);
     background-size: 100% 100%;
     background-color: Transparent;
@@ -95,72 +78,13 @@ a {
 }
 .el-icon {
     display: none;
+} */
+
+img{
     
-}
-.el-carousel__mask{
-    background-color: black;
-    opacity: 0.52;
     width: 32rem;
     height: 17.9911rem;
 }
-/* 
-.swiper-container-3d {
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-}
-.swiper-container {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
 
-.swiper-container-coverflow .swiper-wrapper {
-    -ms-perspective: 1200px;
-}
-.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-.swiper-container-android .swiper-slide, .swiper-wrapper {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-.swiper-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform,-webkit-transform;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-}
-.swiper-slide {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform,-webkit-transform;
-}
-.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-} */
+
 </style>
