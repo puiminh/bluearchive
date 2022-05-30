@@ -1,5 +1,17 @@
 # bluearchiveclone
 
+### Character Info:
+![info](ba-studentinfo.png)
+
+### Character Search:
+![search](ba-studentsearch.png)
+
+
+
+
+
+
+
 ## Project setup
 ```
 npm install
